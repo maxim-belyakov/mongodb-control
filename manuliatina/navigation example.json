@@ -14,6 +14,9 @@
                 "action": "repairedHouse",
                 "timeout": "Boolean",
                 "luck": {
+                    "required": {
+                        "timeOfDay": "night"
+                    },
                     "persent": "Number",
                     "id": 1,
                     "name": "name"

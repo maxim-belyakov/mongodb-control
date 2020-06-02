@@ -1,11 +1,32 @@
 {
-    "name": "shower",
-    "title": "Душ",
-    "original": "black.png",
-    "music": [ 
-        {   
-            "name": "running-water.mp3",
-            "percent": 100 
+    "_id": {
+        "$oid": "5ed4e0c6dd1b429f7d602216"
+    },
+    "name": "hall",
+    "title": "Коридор",
+    "original": "корридор гг 3.png",
+    "night": "корридор гг 5.png",
+    "music": [
+        {
+            "name": "Navprostets.mp3",
+            "percent": {
+                "$numberInt": "100"
+            }
         }
-    ]
+    ],
+    "musicNight": [
+        {
+            "name": "Field.mp3",
+            "percent": {
+                "$numberInt": "100"
+            }
+        }
+    ],
+
+    "special": {
+        "cleanMyRoom": {
+            "original": "корридор гг 2.png",
+            "order": 0
+        }
+    }
 }
