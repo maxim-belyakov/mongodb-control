@@ -1,0 +1,24 @@
+{
+    "navigation": {
+        "name": "*name*",
+        "locations" : [            
+            {
+                "name": "name",
+                "title": "title",
+                "required": {
+                    "timeOfDay": "day",
+                    "special": {
+                        "repairedHouse": true
+                    }
+                },
+                "action": "repairedHouse",
+                "timeout": "Boolean",
+                "luck": {
+                    "persent": "Number",
+                    "id": 1,
+                    "name": "name"
+                }
+            }
+        ]
+    }
+}

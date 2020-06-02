@@ -1,0 +1,11 @@
+{
+    "name": "shower",
+    "title": "Душ",
+    "original": "black.png",
+    "music": [ 
+        {   
+            "name": "running-water.mp3",
+            "percent": 100 
+        }
+    ]
+}

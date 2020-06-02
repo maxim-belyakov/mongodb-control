@@ -1,0 +1,28 @@
+{
+    "navigation": {
+        "name": "hall",
+        "locations" : [            
+            {
+                "name": "hall",
+                "required": {
+                    "timeOfDay": "day"
+                },
+                "action": "cleanMyRoom",
+                "title": "Убрать пыль"
+            },          
+            {
+                "name": "my_room",
+                "title": "Пойти в комнату"
+            },          
+            {
+                "name": "shower",
+                "timeout": true,
+                "title": "Принять душ"
+            },          
+            {
+                "name": "my_room",
+                "title": "Выйти на улицу"
+            }
+        ]
+    }
+}

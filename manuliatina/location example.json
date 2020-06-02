@@ -1,0 +1,48 @@
+{
+    "message": {
+        "id": 1,
+        "name": "name",
+        "original": "original",
+        "sunrise": "sunrise",
+        "sunset": "sunset",
+        "night": "night",
+        "music": [ 
+            {   
+                "name": "original",
+                "percent": "100"  
+            }
+        ],
+        "musicSunrise": [ 
+            {   
+                "name": "musicSunrise",
+                "percent": "100"  
+            }
+        ],
+        "musicSunset": [ 
+            {   
+                "name": "musicSunset",
+                "percent": "100"  
+            }
+        ],
+        "musicNight": [ 
+            {   
+                "name": "musicNight",
+                "percent": "100"  
+            }
+        ],
+
+        "special": {
+            "repairedHouse": {
+                "original": "image original",
+                "night": "image night",
+                "order": 1
+            },
+            "decoratedHouse": {
+                "original": "image original",
+                "night": "image night",
+                "order": 2
+            }
+        }
+            
+    }
+}
