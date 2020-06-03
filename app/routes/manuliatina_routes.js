@@ -31,15 +31,21 @@ module.exports = function(app, db) {
     let result
     let locations = await getLocations(names);
 
-    if (!locations.length) res.send(errorMessage(1, "Can't get locations data"));
+    if (!locations.length) {
+      res.status(500).json(errorMessage(1, "Can't get locations data"));
+    } else {
+      let navigation = await getNavigation(names)
 
-    let navigation = await getNavigation(names)
-    
-    console.log(`locations ${locations}, navigation ${navigation}`)
+      function isCherries(fruit) { 
+        return fruit.name === 'cherries';
+      }
 
-    
-
-    res.send('test');     
+      for (item of locations) {
+        item.navigation = navigation.find( ({ name }) => name === item.name ).locations
+      }      
+  
+      res.send(locations);
+    }
   });
   
 };
