@@ -36,13 +36,11 @@ module.exports = function(app, db) {
     } else {
       let navigation = await getNavigation(names)
 
-      function isCherries(fruit) { 
-        return fruit.name === 'cherries';
-      }
-
-      for (item of locations) {
-        item.navigation = navigation.find( ({ name }) => name === item.name ).locations
-      }      
+      if (navigation.length) {
+        for (item of locations) {
+          item.navigation = navigation.find( ({ name }) => name === item.name ).locations
+        }
+      }         
   
       res.send(locations);
     }
