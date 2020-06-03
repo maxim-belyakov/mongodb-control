@@ -1,8 +1,7 @@
 const noteRoutes = require('./note_routes');
-const locationsRoutes = require('./locations_routes');
+const manuliatinaRoutes = require('./manuliatina_routes');
 
 module.exports = function(app, db) {
-  noteRoutes(app, db.db(`notes`));
-  locationsRoutes(app, db.db(`manuliatina`));
-  // Тут, позже, будут и другие обработчики маршрутов 
+  // noteRoutes(app, db.db(`notes`));
+  manuliatinaRoutes(app, db.db(`manuliatina`));
 };

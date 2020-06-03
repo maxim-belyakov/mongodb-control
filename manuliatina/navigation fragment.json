@@ -1,27 +1,32 @@
 {
     "navigation": {
-        "name": "hall",
+        "name": "lesnaya_street",
         "locations" : [            
             {
                 "name": "hall",
+                "title": "Пойти домой"
+            },          
+            {
+                "name": "severnaya_street",
+                "title": "Пойти на север"
+            },          
+            {
+                "name": "sentabrskaya_street",
+                "title": "Пойти на юг"
+            },          
+            {
+                "name": "enya_house",
+                "title": "Пойти к Ене",
                 "required": {
                     "timeOfDay": "day"
-                },
-                "action": "cleanMyRoom",
-                "title": "Убрать пыль"
+                }
             },          
             {
                 "name": "my_room",
-                "title": "Пойти в комнату"
-            },          
-            {
-                "name": "shower",
-                "timeout": true,
-                "title": "Принять душ"
-            },          
-            {
-                "name": "my_room",
-                "title": "Выйти на улицу"
+                "title": "Пойти к школе",
+                "required": {
+                    "timeOfDay": "day"
+                }
             }
         ]
     }
