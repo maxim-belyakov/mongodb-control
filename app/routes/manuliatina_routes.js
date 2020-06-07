@@ -35,17 +35,17 @@ module.exports = function(app, db) {
     let result
     let locations = await getLocations(names);
 
-
     if (!locations.length) {
-      res.status(500).json(errorMessage(1, "Can't get locations data"));
+      res.status(404).json(errorMessage(1, "Not found locations data"));
     } else {
       let navigation = await getNavigation(names)
 
       if (navigation.length) {
         for (item of locations) {
-          item.navigation = navigation.find( ({ name }) => name === item.name ).locations
+          let naviItem = navigation.find( ({ name }) => name === item.name )
+          if (naviItem) item.navigation = naviItem.locations
         }
-      }         
+      }
   
       res.send(locations);
     }
