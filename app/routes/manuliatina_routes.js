@@ -2,6 +2,10 @@ var ObjectID = require('mongodb').ObjectID;
 
 module.exports = function(app, db) {
 
+
+  // res.status(404).send("Sorry can't find that!")
+  // res.status(500).send("Sorry can't load that!")
+
   const errorMessage = (code, text) => {
     return {
       "message": {
@@ -30,6 +34,7 @@ module.exports = function(app, db) {
     const names = req.query.names ? { name: { $in: req.query.names.split`,` }} : {}
     let result
     let locations = await getLocations(names);
+
 
     if (!locations.length) {
       res.status(500).json(errorMessage(1, "Can't get locations data"));
