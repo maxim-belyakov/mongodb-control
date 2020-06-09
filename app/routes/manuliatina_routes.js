@@ -15,6 +15,10 @@ module.exports = function(app, db) {
     }
   }
 
+  app.get('/maks', (req, res) => {
+    res.send("This is Maaaaaaaaks!");
+  });
+
   app.get('/locations', async (req, res) => {
     const getLocations = (param) => {
       return new Promise((resolve, reject) => {
