@@ -4,7 +4,7 @@ module.exports = function(app, db) {
 
 
   // res.status(404).send("Sorry can't find that!")
-  // res.status(500).send("Sorry can't load that!")
+  // res.status(500).send("Sorry can't load that!") test
 
   const errorMessage = (code, text) => {
     return {
