@@ -16,7 +16,7 @@ module.exports = function(app, db) {
   }
 
   app.get('/maks', (req, res) => {
-    res.send("This is Maaaaaaaaks!");
+    res.send("This is Maaaaaaaaks! Wooow");
   });
 
   app.get('/locations', async (req, res) => {
