@@ -1,8 +1,6 @@
 var ObjectID = require('mongodb').ObjectID;
 
 module.exports = function(app, db) {
-
-
   // res.status(404).send("Sorry can't find that!")
   // res.status(500).send("Sorry can't load that!") test
 
@@ -36,7 +34,6 @@ module.exports = function(app, db) {
     }
 
     const names = req.query.names ? { name: { $in: req.query.names.split`,` }} : {}
-    let result
     let locations = await getLocations(names);
 
     if (!locations.length) {
@@ -51,7 +48,7 @@ module.exports = function(app, db) {
         }
       }
   
-      res.send(locations);
+      res.send(locations); // return
     }
   });
   
